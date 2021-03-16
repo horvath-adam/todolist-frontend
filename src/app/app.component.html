@@ -1,0 +1,13 @@
+<h4>{{title}}</h4>
+<input type="text" [(ngModel)]="newTask"> <button (click)="addTask()">Hozzáad</button>
+<table>
+  <tr *ngFor="let task of tasks">
+    <td>
+      {{task.description}}
+    </td>
+    <td>
+      <button (click)="removeTask(task.id)">Törlés</button>
+    </td>
+  </tr>
+</table>
+
